@@ -114,7 +114,7 @@ for iter in range(1, MAX_ITERATION + 1):
 
     for x_data in batch_data_list:
         image, label = x_data
-        image = auto_augment(image)
+        image = auto_augment.AutoAugment(image)
         
         batch_x_image_list.append(image)
         batch_x_label_list.append(smooth_one_hot(label, CLASSES))
